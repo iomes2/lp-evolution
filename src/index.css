@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:ital,wght@0,400..900;1,400..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-dark text-white font-sans antialiased;
+  }
+}
+
+@layer components {
+
+  /* Utilitários globais que mantem consistência Premium */
+  .btn-primary {
+    @apply bg-primary text-white font-bold py-[18px] px-10 rounded text-lg uppercase tracking-wide transition-all duration-300 hover:bg-primary-hover hover:-translate-y-0.5 hover:shadow-primary-glow;
+  }
+
+  .container-default {
+    @apply w-full max-w-[1200px] mx-auto px-6;
+  }
+}
