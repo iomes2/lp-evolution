@@ -12,11 +12,78 @@
 
 @layer components {
 
-  /* Utilitários globais que mantem consistência Premium */
-  .btn-primary {
-    @apply bg-primary text-white font-bold py-[18px] px-10 rounded text-lg uppercase tracking-wide transition-all duration-300 hover:bg-primary-hover hover:-translate-y-0.5 hover:shadow-primary-glow;
+  /* ── Button System ─────────────────────────────── */
+
+  /* Base shared */
+  .btn {
+    @apply relative overflow-hidden inline-flex items-center gap-3 font-display font-bold uppercase tracking-[0.12em] text-sm transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50;
   }
 
+  /* Primary — gradient + shimmer + glow */
+  .btn-primary {
+    @apply btn py-4 px-8 text-white;
+    background: linear-gradient(135deg, #FF6B1A 0%, #FF5A00 45%, #CC3500 100%);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 160, 80, 0.25),
+      0 2px 0 rgba(0, 0, 0, 0.35);
+    border-radius: 3px;
+  }
+
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(105deg, transparent 35%, rgba(255, 255, 255, 0.18) 50%, transparent 65%);
+    transform: translateX(-100%) skewX(-12deg);
+    transition: transform 0.6s ease;
+  }
+
+  .btn-primary:hover::before {
+    transform: translateX(180%) skewX(-12deg);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 160, 80, 0.25),
+      0 0 0 1px rgba(255, 90, 0, 0.5),
+      0 0 30px rgba(255, 90, 0, 0.35),
+      0 8px 24px rgba(0, 0, 0, 0.5);
+  }
+
+  .btn-primary:active {
+    transform: translateY(0);
+  }
+
+  /* Ghost — outlined, fill-from-left on hover */
+  .btn-ghost {
+    @apply btn py-4 px-8 text-gray-300;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 3px;
+    background: transparent;
+  }
+
+  .btn-ghost::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 90, 0, 0.08);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease;
+  }
+
+  .btn-ghost:hover::before {
+    transform: scaleX(1);
+  }
+
+  .btn-ghost:hover {
+    border-color: rgba(255, 90, 0, 0.45);
+    color: #ffffff;
+    box-shadow: 0 0 18px rgba(255, 90, 0, 0.12);
+  }
+
+  /* ── Legacy / util ─────────────────────────────── */
   .container-default {
     @apply w-full max-w-[1200px] mx-auto px-6;
   }

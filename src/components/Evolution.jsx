@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useCallback } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import { ScrollReveal, ScaleReveal } from './ScrollAnimations';
 
 const Evolution = () => {
@@ -143,8 +143,9 @@ const Evolution = () => {
         <p className="font-display text-lg md:text-xl uppercase tracking-wider font-light italic text-gray-300 mb-10 max-w-[800px] mx-auto">
           OU PARA O HOME GYM MAIS SOFISTICADO — TEMOS O EQUIPAMENTO CERTO PARA VOCÊ.
         </p>
-        <button className="bg-[#2A2A2A] text-white italic font-light py-4 px-10 border border-[#555] text-lg transition-colors hover:bg-white hover:text-black">
-          Solicitar catálogo por segmento
+        <button className="btn-ghost mx-auto">
+          <span className="relative z-10">Solicitar catálogo por segmento</span>
+          <ArrowRight size={16} className="relative z-10" />
         </button>
       </ScrollReveal>
     </section>

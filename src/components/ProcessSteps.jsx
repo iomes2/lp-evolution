@@ -191,9 +191,9 @@ const ProcessSteps = () => {
         <p className="font-display text-lg md:text-xl text-white font-bold uppercase tracking-wide mb-8">
           Seu espaço equipado com quem entende de academia.
         </p>
-        <button className="group bg-primary text-white font-bold py-4 px-10 text-lg transition-all duration-300 hover:bg-primary-hover hover:-translate-y-0.5 hover:shadow-primary-glow flex items-center gap-3 uppercase tracking-wide mx-auto">
-          Quero um orçamento
-          <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
+        <button className="btn-primary mx-auto">
+          <span className="relative z-10">Quero um orçamento</span>
+          <ArrowRight size={18} className="relative z-10 transition-transform duration-300 group-hover:translate-x-1" />
         </button>
         <span className="block mt-3 text-xs text-gray-500 tracking-wide">Proposta personalizada em até 24h</span>
       </ScrollReveal>

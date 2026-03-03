@@ -1,6 +1,5 @@
 import React from 'react';
 import { ArrowRight, MessageCircle } from 'lucide-react';
-import { motion } from 'framer-motion';
 import { ScrollReveal } from './ScrollAnimations';
 
 const CtaBanner = () => {
@@ -65,23 +64,15 @@ const CtaBanner = () => {
           <ScrollReveal direction="right" delay={0.2} duration={0.7}>
             <div className="flex flex-col items-start lg:items-center gap-5">
               {/* Main CTA button */}
-              <motion.button
-                className="group relative bg-primary text-white font-display font-bold text-base py-4 px-10 uppercase tracking-wider flex items-center gap-3 overflow-hidden"
-                whileHover={{ scale: 1.02, y: -1 }}
-                whileTap={{ scale: 0.98 }}
-                transition={{ duration: 0.2 }}
-              >
-                <span className="absolute inset-0 bg-[#e65100] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-400" />
+              <button className="btn-primary">
                 <span className="relative z-10">Quero um orçamento agora</span>
-                <ArrowRight size={18} className="relative z-10 transition-transform group-hover:translate-x-1 duration-300" />
-              </motion.button>
+                <ArrowRight size={18} className="relative z-10 transition-transform duration-300" />
+              </button>
 
               {/* Alternative — WhatsApp */}
-              <button className="group flex items-center gap-3 text-gray-500 hover:text-primary transition-colors duration-300 text-sm">
-                <MessageCircle size={15} />
-                <span className="border-b border-transparent group-hover:border-primary/30 transition-all">
-                  Ou chame pelo WhatsApp
-                </span>
+              <button className="btn-ghost text-xs py-3 px-5">
+                <MessageCircle size={14} className="relative z-10" />
+                <span className="relative z-10">Ou chame pelo WhatsApp</span>
               </button>
             </div>
           </ScrollReveal>

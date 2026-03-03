@@ -86,12 +86,13 @@ const Hero = () => {
           {/* CTA */}
           <ScrollReveal delay={0.9} duration={0.6} once>
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-              <button className="group bg-primary text-white font-bold py-4 px-10 text-lg transition-all duration-300 hover:bg-primary-hover hover:-translate-y-0.5 hover:shadow-primary-glow flex items-center gap-3 uppercase tracking-wide">
-                Ver Catálogo de Equipamentos
-                <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
+              <button className="btn-primary">
+                <span className="relative z-10">Ver Catálogo de Equipamentos</span>
+                <ArrowRight size={18} className="relative z-10 transition-transform group-hover:translate-x-1" />
               </button>
-              <button className="text-gray-400 hover:text-white font-medium py-4 px-6 text-base transition-colors border-b border-transparent hover:border-white/30">
-                Falar com um especialista →
+              <button className="btn-ghost">
+                <span className="relative z-10">Falar com um especialista</span>
+                <ArrowRight size={16} className="relative z-10" />
               </button>
             </div>
           </ScrollReveal>
@@ -115,19 +116,19 @@ const Hero = () => {
 
           {/* Back layer — darkest, slight offset */}
           <path
-            d="M0,85 C180,55 360,95 540,70 C720,45 900,90 1080,65 C1200,50 1320,80 1440,60 L1440,120 L0,120 Z"
+            d="M0,85 C180,55 360,95 540,70 C720,45 900,90 1080,65 C1200,50 1320,80 1440,60 L1440,200 L0,200 Z"
             fill="#191919"
           />
 
           {/* Middle layer */}
           <path
-            d="M0,70 C200,100 400,40 600,65 C800,90 1000,35 1200,60 C1320,72 1400,55 1440,50 L1440,120 L0,120 Z"
+            d="M0,70 C200,100 400,40 600,65 C800,90 1000,35 1200,60 C1320,72 1400,55 1440,50 L1440,200 L0,200 Z"
             fill="#1A1A1A"
           />
 
           {/* Front layer — main wave, with drop shadow */}
           <path
-            d="M0,55 C240,95 480,25 720,60 C960,95 1200,30 1440,55 L1440,120 L0,120 Z"
+            d="M0,55 C240,95 480,25 720,60 C960,95 1200,30 1440,55 L1440,200 L0,200 Z"
             fill="#1C1C1C"
             filter="url(#waveShadow)"
           />
