@@ -24,21 +24,21 @@ const CtaBanner = () => {
             <ScrollReveal direction="left" duration={0.7}>
               <div className="flex items-center gap-3 mb-5">
                 <div className="w-8 h-[2px] bg-primary" />
-                <span className="text-primary uppercase text-xs font-bold tracking-[0.3em] font-display">Próximo passo</span>
+                <span className="text-primary uppercase text-xs font-bold tracking-[0.3em] font-display">Pronto para equipar?</span>
               </div>
             </ScrollReveal>
 
             <ScrollReveal delay={0.1} duration={0.7}>
               <h2 className="font-display text-2xl md:text-3xl lg:text-4xl uppercase leading-[1.15] tracking-wide">
-                <span className="font-light text-gray-300">Vamos conversar sobre</span>
+                <span className="font-light text-gray-300">Eleve o padrão</span>
                 <br />
-                <span className="font-black text-white italic">o seu projeto?</span>
+                <span className="font-black text-white italic">da sua academia.</span>
               </h2>
             </ScrollReveal>
 
             <ScrollReveal delay={0.2} duration={0.6}>
               <p className="mt-4 text-gray-400 font-sans text-sm md:text-base leading-relaxed max-w-[480px]">
-                Fale com um especialista da Evolution Fitness e receba uma <strong className="text-gray-200">orientação personalizada</strong> para o seu espaço. Sem compromisso.
+                Fale agora com um especialista da Evolution Fitness e receba em até <strong className="text-gray-200">24 horas</strong> uma proposta com os equipamentos certos para o seu negócio. Sem enrolação.
               </p>
             </ScrollReveal>
 
@@ -47,15 +47,15 @@ const CtaBanner = () => {
               <div className="flex flex-wrap items-center gap-6 mt-6 text-xs text-gray-500">
                 <div className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 rounded-full bg-primary/60" />
-                  <span>Resposta em até 24h</span>
+                  <span>Fabricante direto — melhor custo</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 rounded-full bg-primary/60" />
-                  <span>Orçamento sem custo</span>
+                  <span>Entrega garantida em todo o Brasil</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-1.5 h-1.5 rounded-full bg-primary/60" />
-                  <span>Atendimento humanizado</span>
+                  <span>Suporte técnico pós-venda real</span>
                 </div>
               </div>
             </ScrollReveal>
@@ -72,7 +72,7 @@ const CtaBanner = () => {
                 transition={{ duration: 0.2 }}
               >
                 <span className="absolute inset-0 bg-[#e65100] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-400" />
-                <span className="relative z-10">Falar com um especialista</span>
+                <span className="relative z-10">Quero um orçamento agora</span>
                 <ArrowRight size={18} className="relative z-10 transition-transform group-hover:translate-x-1 duration-300" />
               </motion.button>
 

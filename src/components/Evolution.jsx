@@ -12,10 +12,10 @@ const Evolution = () => {
     { id: 3, label: "HOME GYMS DE\nALTO PADRÃO" },
     { id: 4, label: "HOTÉIS E RESORTS" },
     { id: 5, label: "ACADEMIAS\nPROFISSIONAIS" },
-    { id: 6, label: "EMPRESAS E\nCORPORATIVO" },
-    { id: 7, label: "EMPRESAS E\nCORPORATIVO" },
-    { id: 8, label: "EMPRESAS E\nCORPORATIVO" },
-    { id: 9, label: "EMPRESAS E\nCORPORATIVO" },
+    { id: 6, label: "CORPORATIVO E\nEMPRESAS" },
+    { id: 7, label: "CLÍNICAS E\nREABILITAÇÃO" },
+    { id: 8, label: "ESCOLAS E\nUNIVERSIDADES" },
+    { id: 9, label: "ESPAÇOS\nPÚBLICOS" },
   ];
 
   // Triplicamos os items para criar o loop infinito
@@ -87,7 +87,7 @@ const Evolution = () => {
       {/* Title */}
       <ScrollReveal className="text-center mb-14">
         <h2 className="font-display text-3xl md:text-4xl font-light italic tracking-wider uppercase">
-          A <span className="font-black text-primary not-italic">EVOLUÇÃO</span> QUE VOCÊ PRECISA
+          EQUIPAMENTOS PARA CADA <span className="font-black text-primary not-italic">SEGMENTO</span>
         </h2>
       </ScrollReveal>
 
@@ -138,13 +138,13 @@ const Evolution = () => {
       {/* Bottom CTA */}
       <ScrollReveal className="text-center mt-16 md:mt-20 px-6" delay={0.2}>
         <p className="font-display text-lg md:text-xl uppercase tracking-wider font-light italic text-gray-300 mb-2 max-w-[800px] mx-auto leading-relaxed">
-          SE VOCÊ BUSCA UM PROJETO FUNCIONAL, DURÁVEL E DE ALTO PADRÃO,
+          SEJA PARA UMA ACADEMIA COMERCIAL DE ALTO VOLUME
         </p>
         <p className="font-display text-lg md:text-xl uppercase tracking-wider font-light italic text-gray-300 mb-10 max-w-[800px] mx-auto">
-          VOCÊ ESTÁ NO LUGAR CERTO.
+          OU PARA O HOME GYM MAIS SOFISTICADO — TEMOS O EQUIPAMENTO CERTO PARA VOCÊ.
         </p>
         <button className="bg-[#2A2A2A] text-white italic font-light py-4 px-10 border border-[#555] text-lg transition-colors hover:bg-white hover:text-black">
-          Falar com um especialista agora
+          Solicitar catálogo por segmento
         </button>
       </ScrollReveal>
     </section>

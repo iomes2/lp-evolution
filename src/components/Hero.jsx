@@ -33,7 +33,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-transparent"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
       </motion.div>
-
+∆
       {/* Main Content Area — Fade out on scroll */}
       <motion.div
         className="relative z-10 container-default flex-1 flex items-center py-20"
@@ -45,24 +45,23 @@ const Hero = () => {
           <ScrollReveal direction="left" delay={0.1} duration={0.7} once>
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-[2px] bg-primary"></div>
-              <span className="text-primary uppercase text-sm font-bold tracking-[0.25em] font-display">Evolution Fitness</span>
+              <span className="text-primary uppercase text-sm font-bold tracking-[0.25em] font-display">Evolution Fitness · Fabricante Oficial</span>
             </div>
           </ScrollReveal>
 
           {/* Headline */}
           <ScrollReveal delay={0.3} duration={0.8} once>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-6 uppercase text-white">
-              PROJETOS COMPLETOS <br/>
-              <span className="text-gray-400 font-light">DE ACADEMIAS,</span> <br className="hidden md:block"/>
-              DO <span className="text-primary">PLANEJAMENTO</span> <br className="hidden md:block"/>
-              À ENTREGA FINAL
+              EQUIPAMENTOS QUE <br/>
+              <span className="text-gray-400 font-light">TRANSFORMAM</span> <br className="hidden md:block"/>
+              ACADEMIAS EM <span className="text-primary">REFERÊNCIA.</span>
             </h1>
           </ScrollReveal>
 
           {/* Subheadline */}
           <ScrollReveal delay={0.5} duration={0.7} once>
             <p className="text-lg md:text-xl leading-relaxed mb-8 text-gray-300 font-sans max-w-[560px]">
-              Planejamento técnico, equipamentos de <strong className="text-white">alta performance</strong> e suporte especializado para transformar seu espaço em referência.
+              Máquinas de <strong className="text-white">alta performance</strong> produzidas no Brasil, entregues em qualquer estado. Esteiras, bicicletas, musculação — tudo o que sua academia precisa para competir no mais alto nível.
             </p>
           </ScrollReveal>
 
@@ -71,15 +70,15 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 mb-10 text-sm text-gray-400">
               <div className="flex items-center gap-2">
                 <CheckCircle2 size={16} className="text-primary" />
-                <span>+500 projetos entregues</span>
+                <span>+100.000 equipamentos vendidos</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 size={16} className="text-primary" />
-                <span>Presente em todo o Brasil</span>
+                <span>+300 pontos de venda no Brasil</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 size={16} className="text-primary" />
-                <span>Suporte completo</span>
+                <span>15 anos de mercado</span>
               </div>
             </div>
           </ScrollReveal>
@@ -88,11 +87,11 @@ const Hero = () => {
           <ScrollReveal delay={0.9} duration={0.6} once>
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
               <button className="group bg-primary text-white font-bold py-4 px-10 text-lg transition-all duration-300 hover:bg-primary-hover hover:-translate-y-0.5 hover:shadow-primary-glow flex items-center gap-3 uppercase tracking-wide">
-                Falar com um especialista
+                Ver Catálogo de Equipamentos
                 <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
               </button>
               <button className="text-gray-400 hover:text-white font-medium py-4 px-6 text-base transition-colors border-b border-transparent hover:border-white/30">
-                Conheça nossos projetos →
+                Falar com um especialista →
               </button>
             </div>
           </ScrollReveal>

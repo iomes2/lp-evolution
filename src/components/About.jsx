@@ -20,12 +20,12 @@ const About = () => {
               <span className="text-primary uppercase text-[10px] font-bold tracking-[0.35em] font-display">Por que a Evolution?</span>
             </div>
             <h2 className="font-display font-black text-xl md:text-2xl uppercase tracking-wide text-white leading-tight">
-              Do rascunho à entrega —{' '}
-              <span className="text-primary">sem terceiros.</span>
+              Fabricamos. Distribuímos.{' '}
+              <span className="text-primary">Você vende mais.</span>
             </h2>
           </div>
           <p className="text-xs text-gray-500 max-w-xs leading-relaxed">
-            Projeto, equipamentos e montagem em uma única empresa. Sem retrabalho, sem surpresas no orçamento.
+            Com 15 anos de fábrica e mais de 100 mil máquinas rodando no Brasil, somos a parceira que seu negócio precisava.
           </p>
         </ScrollReveal>
 
@@ -37,20 +37,20 @@ const About = () => {
 
           {/* 1 — Stat grande | 2 cols */}
           <StaggerItem className="col-span-2 md:col-span-1 bg-[#161616] border border-white/[0.06] p-7 flex flex-col justify-between gap-8 rounded-sm group hover:border-primary/20 transition-all duration-300">
-            <span className="text-[10px] uppercase tracking-[0.3em] text-gray-600 font-semibold">Projetos entregues</span>
-            <span className="font-display font-black text-6xl text-primary leading-none">500<span className="text-3xl">+</span></span>
+            <span className="text-[10px] uppercase tracking-[0.3em] text-gray-600 font-semibold">Equipamentos vendidos</span>
+            <span className="font-display font-black text-6xl text-primary leading-none">100k<span className="text-3xl">+</span></span>
           </StaggerItem>
 
           {/* 2 — Anos */}
           <StaggerItem className="col-span-1 bg-[#161616] border border-white/[0.06] p-7 flex flex-col justify-between gap-8 rounded-sm hover:border-primary/20 transition-all duration-300">
-            <span className="text-[10px] uppercase tracking-[0.3em] text-gray-600 font-semibold">De mercado</span>
-            <span className="font-display font-black text-5xl text-white leading-none">10<span className="text-2xl text-primary">+</span></span>
+            <span className="text-[10px] uppercase tracking-[0.3em] text-gray-600 font-semibold">Anos de mercado</span>
+            <span className="font-display font-black text-5xl text-white leading-none">15<span className="text-2xl text-primary">+</span></span>
           </StaggerItem>
 
           {/* 3 — Brasil */}
           <StaggerItem className="col-span-1 bg-primary/10 border border-primary/20 p-7 flex flex-col justify-between gap-8 rounded-sm hover:bg-primary/15 transition-all duration-300">
-            <span className="text-[10px] uppercase tracking-[0.3em] text-primary/70 font-semibold">Cobertura</span>
-            <span className="font-display font-black text-5xl text-white leading-none">BR</span>
+            <span className="text-[10px] uppercase tracking-[0.3em] text-primary/70 font-semibold">Pontos de venda</span>
+            <span className="font-display font-black text-5xl text-white leading-none">300<span className="text-2xl text-primary">+</span></span>
           </StaggerItem>
 
           {/* 4 — Promessa Projeto 48h | tall */}
@@ -59,18 +59,18 @@ const About = () => {
               <div className="w-7 h-7 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center mb-5">
                 <span className="text-primary font-black text-xs">1</span>
               </div>
-              <h3 className="font-display font-black text-sm uppercase tracking-wider text-white mb-3">Projeto em 48h</h3>
+              <h3 className="font-display font-black text-sm uppercase tracking-wider text-white mb-3">Tecnologia Nacional</h3>
               <p className="text-xs text-gray-400 leading-relaxed">
-                Você envia o espaço, a gente devolve projeto completo em 2 dias úteis. Zero enrolação.
+                Produzidos no Brasil, nossos equipamentos têm peças acessíveis e assistência técnica ágil — sem a burocracia da importação.
               </p>
             </div>
             <div>
               <div className="w-7 h-7 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center mb-5">
                 <span className="text-primary font-black text-xs">2</span>
               </div>
-              <h3 className="font-display font-black text-sm uppercase tracking-wider text-white mb-3">Montagem inclusa</h3>
+              <h3 className="font-display font-black text-sm uppercase tracking-wider text-white mb-3">Entrega para todo o Brasil</h3>
               <p className="text-xs text-gray-400 leading-relaxed">
-                Entregamos e montamos em qualquer estado. Sem você precisar contratar mais ninguém.
+                Do Oiapoque ao Chuí, entregamos com agilidade, segurança e prazo garantido.
               </p>
             </div>
           </StaggerItem>
@@ -94,11 +94,11 @@ const About = () => {
           <StaggerItem className="col-span-2 bg-[#111111] border border-white/[0.06] p-7 rounded-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
             <div className="flex flex-col gap-2.5">
               <p className="text-xs text-gray-300 leading-relaxed max-w-xs">
-                <span className="text-white font-semibold">Preocupado com o orçamento?</span>{' '}
-                Fazemos uma proposta antes de qualquer compromisso.
+                <span className="text-white font-semibold">Preocupado com manutenção futura?</span>{' '}
+                Reposição de peças garantida e rede de assistência em todo o Brasil.
               </p>
               <div className="flex flex-wrap gap-4 text-[11px] text-gray-500">
-                {['Sem custos ocultos', 'Proposta grátis', 'Garantia de entrega'].map((item) => (
+                {['Fabricante direto', 'Orçamento grátis', 'Suporte pós-venda'].map((item) => (
                   <div key={item} className="flex items-center gap-1.5">
                     <CheckCircle2 size={12} className="text-primary shrink-0" />
                     {item}
@@ -107,7 +107,7 @@ const About = () => {
               </div>
             </div>
             <button className="group shrink-0 flex items-center gap-2 text-xs font-display font-black uppercase tracking-widest text-primary hover:text-white transition-colors duration-300 whitespace-nowrap">
-              Quero meu projeto
+              Ver catálogo completo
               <ArrowRight size={14} className="transition-transform group-hover:translate-x-1 duration-300" />
             </button>
           </StaggerItem>

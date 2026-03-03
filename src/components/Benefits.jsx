@@ -1,33 +1,33 @@
 import React from 'react';
-import { Headphones, ClipboardList, Dumbbell, Truck, PhoneCall } from 'lucide-react';
+import { Factory, Dumbbell, Shield, Truck, Headphones } from 'lucide-react';
 import { StaggerContainer, StaggerItem, ScrollReveal } from './ScrollAnimations';
 
 const Benefits = () => {
   const items = [
     {
-      icon: <Headphones className="w-7 h-7" />,
-      title: 'Atendimento humano e consultivo',
-      description: 'Especialistas reais que entendem seu projeto — sem robôs, sem respostas genéricas.',
-    },
-    {
-      icon: <ClipboardList className="w-7 h-7" />,
-      title: 'Projetos personalizados',
-      description: 'Cada espaço é único. Desenvolvemos layouts sob medida para o perfil de uso real.',
+      icon: <Factory className="w-7 h-7" />,
+      title: 'Fabricante direto — sem intermediários',
+      description: 'Compre direto de quem fabrica. Melhor custo-beneficio, suporte técnico real e relacionamento direto com a origem do produto.',
     },
     {
       icon: <Dumbbell className="w-7 h-7" />,
-      title: 'Equipamentos tecnológicos e duráveis',
-      description: 'Máquinas de alta performance, construídas para uso intenso e longa vida útil.',
+      title: 'Durabilidade comprovada em uso intenso',
+      description: 'Máquinas testadas para academias comerciais de alto volume. Vida útil acima da média do mercado.'
+    },
+    {
+      icon: <Shield className="w-7 h-7" />,
+      title: 'Tecnologia 100% nacional',
+      description: 'Produção no Brasil significa peças acessíveis, assistência técnica ágil e nenhuma burocracia de importação.',
     },
     {
       icon: <Truck className="w-7 h-7" />,
-      title: 'Entrega rápida em todo o Brasil',
-      description: 'Logística própria com rastreamento, montagem inclusa e prazo garantido.',
+      title: 'Entrega expressa em todo o Brasil',
+      description: 'Logística própria com rastreamento, instalação inclusa e prazo garantido de ponta a ponta.',
     },
     {
-      icon: <PhoneCall className="w-7 h-7" />,
-      title: 'Pós-venda e suporte técnico',
-      description: 'Não abandonamos você após a entrega. Suporte contínuo para seu investimento.',
+      icon: <Headphones className="w-7 h-7" />,
+      title: 'Suporte técnico pós-venda real',
+      description: 'Não abandonamos você após a entrega. Reposição de peças, manutenção e suporte especializado quando precisar.',
     },
   ];
 
@@ -36,7 +36,7 @@ const Benefits = () => {
       {/* Optional headline */}
       <ScrollReveal className="container-default text-center mb-14">
         <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-light italic tracking-[0.12em] uppercase text-gray-300">
-          Por que escolher a{' '}
+          Por que comprar da{' '}
           <span className="font-black not-italic text-white">Evolution Fitness</span>
         </h2>
       </ScrollReveal>
