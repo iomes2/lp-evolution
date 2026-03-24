@@ -2,20 +2,22 @@ import React, { useRef, useEffect, useCallback } from 'react';
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import { ScrollReveal, ScaleReveal } from './ScrollAnimations';
 
+import video1 from '../assets/0_Woman_Treadmill_1920x1080.mp4';
+import video2 from '../assets/2_Gym_Fitness_1920x1080.mp4';
+import video3 from '../assets/0_Gym_Fitness_1920x1080.mp4';
+import video4 from '../assets/Fit-Curitiba-Itajai-1.mp4';
+import video5 from '../assets/ativagf.mp4';
+
 const Evolution = () => {
   const scrollRef = useRef(null);
   const isScrollingRef = useRef(false);
 
   const categories = [
-    { id: 1, label: "CONDOMÍNIOS" },
-    { id: 2, label: "CONSTRUTORAS E\nINCORPORADORAS" },
-    { id: 3, label: "HOME GYMS DE\nALTO PADRÃO" },
-    { id: 4, label: "HOTÉIS E RESORTS" },
-    { id: 5, label: "ACADEMIAS\nPROFISSIONAIS" },
-    { id: 6, label: "CORPORATIVO E\nEMPRESAS" },
-    { id: 7, label: "CLÍNICAS E\nREABILITAÇÃO" },
-    { id: 8, label: "ESCOLAS E\nUNIVERSIDADES" },
-    { id: 9, label: "ESPAÇOS\nPÚBLICOS" },
+    { id: 1, label: "CARDIO", video: video1 },
+    { id: 2, label: "MUSCULAÇÃO", video: video2 },
+    { id: 3, label: "ACESSÓRIOS", video: video3 },
+    { id: 4, label: "PESOS LIVRES", video: video4 },
+    { id: 5, label: "CROSSFIT", video: video5 },
   ];
 
   // Triplicamos os items para criar o loop infinito
@@ -87,7 +89,7 @@ const Evolution = () => {
       {/* Title */}
       <ScrollReveal className="text-center mb-14">
         <h2 className="font-display text-3xl md:text-4xl font-light italic tracking-wider uppercase">
-          EQUIPAMENTOS PARA CADA <span className="font-black text-primary not-italic">SEGMENTO</span>
+          EXCELÊNCIA EM CADA <span className="font-black text-primary not-italic">DETALHE</span>
         </h2>
       </ScrollReveal>
 
@@ -120,8 +122,19 @@ const Evolution = () => {
                 data-card
                 className="flex-shrink-0 w-[220px] md:w-[260px] h-[360px] md:h-[420px] bg-[#1A1A1A] rounded-2xl border border-[#333] relative overflow-hidden cursor-pointer group hover:border-primary/40 transition-all duration-300 snap-start"
               >
-                {/* Placeholder — imagens virão aqui depois */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+                {/* Video Background */}
+                {cat.video && (
+                  <video 
+                    autoPlay 
+                    loop 
+                    muted 
+                    playsInline
+                    className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 group-hover:opacity-90 transition-all duration-700"
+                  >
+                    <source src={cat.video} type="video/mp4" />
+                  </video>
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent group-hover:via-black/10 transition-colors duration-500"></div>
 
                 {/* Label at bottom */}
                 <div className="absolute bottom-0 left-0 right-0 p-5">
@@ -138,13 +151,13 @@ const Evolution = () => {
       {/* Bottom CTA */}
       <ScrollReveal className="text-center mt-16 md:mt-20 px-6" delay={0.2}>
         <p className="font-display text-lg md:text-xl uppercase tracking-wider font-light italic text-gray-300 mb-2 max-w-[800px] mx-auto leading-relaxed">
-          SEJA PARA UMA ACADEMIA COMERCIAL DE ALTO VOLUME
+          ALTA PERFORMANCE, DESIGN INOVADOR E DURABILIDADE
         </p>
         <p className="font-display text-lg md:text-xl uppercase tracking-wider font-light italic text-gray-300 mb-10 max-w-[800px] mx-auto">
-          OU PARA O HOME GYM MAIS SOFISTICADO — TEMOS O EQUIPAMENTO CERTO PARA VOCÊ.
+          PARA O SEU TREINO.
         </p>
         <button className="btn-ghost mx-auto">
-          <span className="relative z-10">Solicitar catálogo por segmento</span>
+          <span className="relative z-10">FALAR COM UM ESPECIALISTA</span>
           <ArrowRight size={16} className="relative z-10" />
         </button>
       </ScrollReveal>

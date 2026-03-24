@@ -52,16 +52,16 @@ const Hero = () => {
           {/* Headline */}
           <ScrollReveal delay={0.3} duration={0.8} once>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-6 uppercase text-white">
-              EQUIPAMENTOS QUE <br/>
-              <span className="text-gray-400 font-light">TRANSFORMAM</span> <br className="hidden md:block"/>
-              ACADEMIAS EM <span className="text-primary">REFERÊNCIA.</span>
+              EQUIPAMENTOS DE <br/>
+              <span className="text-gray-400 font-light">ALTA PERFORMANCE,</span> <br className="hidden md:block"/>
+              DESENVOLVIDOS PARA <span className="text-primary">MAXIMIZAR SEUS TREINOS</span>
             </h1>
           </ScrollReveal>
 
           {/* Subheadline */}
           <ScrollReveal delay={0.5} duration={0.7} once>
             <p className="text-lg md:text-xl leading-relaxed mb-8 text-gray-300 font-sans max-w-[560px]">
-              Máquinas de <strong className="text-white">alta performance</strong> produzidas no Brasil, entregues em qualquer estado. Esteiras, bicicletas, musculação — tudo o que sua academia precisa para competir no mais alto nível.
+              Nossos equipamentos oferecem durabilidade e conforto com biomecânica avançada.
             </p>
           </ScrollReveal>
 
@@ -87,7 +87,7 @@ const Hero = () => {
           <ScrollReveal delay={0.9} duration={0.6} once>
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
               <button className="btn-primary">
-                <span className="relative z-10">Ver Catálogo de Equipamentos</span>
+                <span className="relative z-10">CONHECER EQUIPAMENTOS</span>
                 <ArrowRight size={18} className="relative z-10 transition-transform group-hover:translate-x-1" />
               </button>
               <button className="btn-ghost">

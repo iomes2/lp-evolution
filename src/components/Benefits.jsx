@@ -6,28 +6,28 @@ const Benefits = () => {
   const items = [
     {
       icon: <Factory className="w-7 h-7" />,
-      title: 'Fabricante direto — sem intermediários',
-      description: 'Compre direto de quem fabrica. Melhor custo-beneficio, suporte técnico real e relacionamento direto com a origem do produto.',
+      title: 'Qualidade Premium',
+      description: 'Materiais de alta resistência',
     },
     {
       icon: <Dumbbell className="w-7 h-7" />,
-      title: 'Durabilidade comprovada em uso intenso',
-      description: 'Máquinas testadas para academias comerciais de alto volume. Vida útil acima da média do mercado.'
-    },
-    {
-      icon: <Shield className="w-7 h-7" />,
-      title: 'Tecnologia 100% nacional',
-      description: 'Produção no Brasil significa peças acessíveis, assistência técnica ágil e nenhuma burocracia de importação.',
+      title: 'Biomecânica Avançada',
+      description: 'Movimentos precisos e seguros'
     },
     {
       icon: <Truck className="w-7 h-7" />,
-      title: 'Entrega expressa em todo o Brasil',
-      description: 'Logística própria com rastreamento, instalação inclusa e prazo garantido de ponta a ponta.',
+      title: 'Entrega Rápida',
+      description: 'Para todo o Brasil',
     },
     {
       icon: <Headphones className="w-7 h-7" />,
-      title: 'Suporte técnico pós-venda real',
-      description: 'Não abandonamos você após a entrega. Reposição de peças, manutenção e suporte especializado quando precisar.',
+      title: 'Atendimento Personalizado',
+      description: 'Suporte do início ao fim',
+    },
+    {
+      icon: <Shield className="w-7 h-7" />,
+      title: 'Garantia de Fábrica',
+      description: 'Tranquilidade para você',
     },
   ];
 

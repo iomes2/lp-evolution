@@ -69,11 +69,10 @@ const ContactForm = () => {
       />
 
       <div className="container-default relative z-10">
-        {/* Section header */}
         <ScrollReveal className="mb-12 text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="w-8 h-[2px] bg-primary" />
-            <span className="text-primary uppercase text-xs font-bold tracking-[0.3em] font-display">Fale conosco</span>
+            <span className="text-primary uppercase text-xs font-bold tracking-[0.3em] font-display">FALE CONOSCO</span>
             <div className="w-8 h-[2px] bg-primary" />
           </div>
           <h2 className="font-display text-3xl md:text-4xl font-light uppercase tracking-wide">
@@ -81,8 +80,7 @@ const ContactForm = () => {
             <span className="font-black text-primary not-italic">Contato</span>
           </h2>
           <p className="mt-4 text-gray-400 text-sm md:text-base max-w-md mx-auto">
-            Preencha o formulário e entraremos em contato em até{' '}
-            <strong className="text-gray-200">2 horas!</strong>
+            Preencha os campos abaixo para entrar em contato com a nossa equipe.
           </p>
         </ScrollReveal>
 
@@ -160,19 +158,20 @@ const ContactForm = () => {
                   </InputField>
 
                   {/* Empresa */}
-                  <InputField label="Nome da Empresa">
+                  <InputField label="Assunto da Mensagem" required>
                     <input
                       type="text"
                       name="company"
                       value={form.company}
                       onChange={handleChange}
-                      placeholder="Digite o nome da sua empresa"
+                      placeholder="Sobre o que quer falar?"
                       className={inputClass}
+                      required
                     />
                   </InputField>
 
                   {/* Tipo de Cliente */}
-                  <InputField label="Tipo de Cliente">
+                  <InputField label="Setor de origem" required>
                     <select
                       name="clientType"
                       value={form.clientType}

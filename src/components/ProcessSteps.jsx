@@ -9,24 +9,24 @@ const ProcessSteps = () => {
 
   const steps = [
     {
-      number: '01',
-      title: 'Fale com um especialista',
-      description: 'Nos conta o perfil da sua academia, o espaço e o público. Sem formulários intermináveis.',
+      number: '1',
+      title: 'Biomecânica Avançada',
+      description: 'Movimentos precisos e seguros garantindo a melhor performance e proteção nas articulações.',
     },
     {
-      number: '02',
-      title: 'Proposta personalizada',
-      description: 'Selecionamos os equipamentos ideais para sua necessidade e orçamento. Em até 24h.',
+      number: '2',
+      title: 'Acabamento Premium',
+      description: 'Design moderno e materiais de altíssima qualidade que valorizam o seu espaço de treino.',
     },
     {
-      number: '03',
-      title: 'Produção e qualidade',
-      description: 'Confirmado o pedido, cada equipamento passa por rigoroso controle de qualidade antes de sair da fábrica.',
+      number: '3',
+      title: 'Durabilidade Extrema',
+      description: 'Equipamentos robustos desenvolvidos para suportar o uso intenso do dia a dia da academia.',
     },
     {
-      number: '04',
-      title: 'Entrega e instalação',
-      description: 'Nossa equipe entrega, instala e faz o comissionamento. Sua academia pronta para operar.',
+      number: '4',
+      title: 'Design Ergonômico',
+      description: 'Cada detalhe é pensado para oferecer adaptação perfeita e sofisticação.',
     },
   ];
 
@@ -54,12 +54,11 @@ const ProcessSteps = () => {
           <div className="w-8 h-[2px] bg-primary" />
         </div>
         <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-light italic tracking-[0.12em] uppercase text-gray-300">
-          De parceiro a parceiro{' '}
-          <span className="font-black not-italic text-white">— simples assim.</span>
+          NOSSOS EQUIPAMENTOS SÃO PENSADOS{' '}
+          <span className="font-black not-italic text-white">NO SEU TREINO.</span>
         </h2>
         <p className="mt-4 text-gray-400 font-sans text-base md:text-lg max-w-[600px] mx-auto">
-          Da primeira conversa até a academia equipada, estamos com você em cada etapa.
-          <strong className="text-gray-200"> Você foca no seu negócio — nós cuidamos dos equipamentos.</strong>
+          Cada detalhe foi desenvolvido para garantir alta performance, segurança e resultados excepcionais.
         </p>
       </ScrollReveal>
 
@@ -185,17 +184,10 @@ const ProcessSteps = () => {
 
       {/* CTA Block — Conversion push */}
       <ScrollReveal className="relative z-10 text-center mt-16 md:mt-24 px-6" delay={0.3}>
-        <p className="font-display text-base md:text-lg text-gray-400 italic mb-2">
-          Sem complicação. Sem surpresas de prazo.
-        </p>
-        <p className="font-display text-lg md:text-xl text-white font-bold uppercase tracking-wide mb-8">
-          Seu espaço equipado com quem entende de academia.
-        </p>
         <button className="btn-primary mx-auto">
-          <span className="relative z-10">Quero um orçamento</span>
+          <span className="relative z-10">FALAR COM UM ESPECIALISTA</span>
           <ArrowRight size={18} className="relative z-10 transition-transform duration-300 group-hover:translate-x-1" />
         </button>
-        <span className="block mt-3 text-xs text-gray-500 tracking-wide">Proposta personalizada em até 24h</span>
       </ScrollReveal>
     </section>
   );

@@ -22,11 +22,11 @@ const Header = () => {
 
         {/* Navigation Links */}
         <nav className="hidden md:flex items-center gap-8">
-          <a href="#" className="text-sm font-medium hover:text-primary transition-colors border-b border-primary pb-1">Home</a>
-          <a href="#" className="text-sm font-medium hover:text-primary transition-colors text-gray-300">Sobre nós</a>
-          <a href="#" className="text-sm font-medium hover:text-primary transition-colors text-gray-300">Nossas marcas</a>
-          <a href="#" className="text-sm font-medium hover:text-primary transition-colors text-gray-300">Licenciadas</a>
-          <a href="#" className="text-sm font-medium hover:text-primary transition-colors text-gray-300">Contato</a>
+          <a href="#" className="text-sm font-medium hover:text-primary transition-colors border-b border-primary pb-1">INÍCIO</a>
+          <a href="#" className="text-sm font-medium hover:text-primary transition-colors text-gray-300">SOBRE</a>
+          <a href="#" className="text-sm font-medium hover:text-primary transition-colors text-gray-300">DIFERENCIAIS</a>
+          <a href="#" className="text-sm font-medium hover:text-primary transition-colors text-gray-300">PRODUTOS</a>
+          <a href="#" className="text-sm font-medium hover:text-primary transition-colors text-gray-300">CONTATO</a>
         </nav>
 
         {/* Social Icons */}

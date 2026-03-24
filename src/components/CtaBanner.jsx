@@ -23,21 +23,21 @@ const CtaBanner = () => {
             <ScrollReveal direction="left" duration={0.7}>
               <div className="flex items-center gap-3 mb-5">
                 <div className="w-8 h-[2px] bg-primary" />
-                <span className="text-primary uppercase text-xs font-bold tracking-[0.3em] font-display">Pronto para equipar?</span>
+                <span className="text-primary uppercase text-xs font-bold tracking-[0.3em] font-display">PRECISA DE AJUDA PARA ESCOLHER OS EQUIPAMENTOS IDEAIS?</span>
               </div>
             </ScrollReveal>
 
             <ScrollReveal delay={0.1} duration={0.7}>
               <h2 className="font-display text-2xl md:text-3xl lg:text-4xl uppercase leading-[1.15] tracking-wide">
-                <span className="font-light text-gray-300">Eleve o padrão</span>
+                <span className="font-light text-gray-300">PRECISA DE AJUDA PARA ESCOLHER</span>
                 <br />
-                <span className="font-black text-white italic">da sua academia.</span>
+                <span className="font-black text-white italic">OS EQUIPAMENTOS IDEAIS?</span>
               </h2>
             </ScrollReveal>
 
             <ScrollReveal delay={0.2} duration={0.6}>
               <p className="mt-4 text-gray-400 font-sans text-sm md:text-base leading-relaxed max-w-[480px]">
-                Fale agora com um especialista da Evolution Fitness e receba em até <strong className="text-gray-200">24 horas</strong> uma proposta com os equipamentos certos para o seu negócio. Sem enrolação.
+                Temos uma equipe pronta para tirar as suas dúvidas e ajudar no que for preciso.
               </p>
             </ScrollReveal>
 
@@ -63,9 +63,8 @@ const CtaBanner = () => {
           {/* Right — CTA Block */}
           <ScrollReveal direction="right" delay={0.2} duration={0.7}>
             <div className="flex flex-col items-start lg:items-center gap-5">
-              {/* Main CTA button */}
               <button className="btn-primary">
-                <span className="relative z-10">Quero um orçamento agora</span>
+                <span className="relative z-10">FALAR COM UM ESPECIALISTA</span>
                 <ArrowRight size={18} className="relative z-10 transition-transform duration-300" />
               </button>
 
