@@ -13,11 +13,11 @@ const Evolution = () => {
   const isScrollingRef = useRef(false);
 
   const categories = [
-    { id: 1, label: "CARDIO", video: video1 },
-    { id: 2, label: "MUSCULAÇÃO", video: video2 },
-    { id: 3, label: "ACESSÓRIOS", video: video3 },
-    { id: 4, label: "PESOS LIVRES", video: video4 },
-    // { id: 5, label: "CROSSFIT", video: video5 },
+    { id: 1, label: "CONDOMÍNIOS", video: video1 },
+    { id: 2, label: "CONSTRUTORAS E\nINCORPORADORAS", video: video2 },
+    { id: 3, label: "HOME GYMS DE\nALTO PADRÃO", video: video3 },
+    { id: 4, label: "HOTÉIS E RESORTS", video: video4 },
+    { id: 5, label: "ACADEMIAS\nPROFISSIONAIS", video: video1 },
   ];
 
   // Triplicamos os items para criar o loop infinito
@@ -89,7 +89,7 @@ const Evolution = () => {
       {/* Title */}
       <ScrollReveal className="text-center mb-14">
         <h2 className="font-display text-3xl md:text-4xl font-light italic tracking-wider uppercase">
-          EXCELÊNCIA EM CADA <span className="font-black text-primary not-italic">DETALHE</span>
+          A <span className="font-black text-white not-italic">EVOLUÇÃO</span> QUE VOCÊ PRECISA
         </h2>
       </ScrollReveal>
 
@@ -150,14 +150,11 @@ const Evolution = () => {
 
       {/* Bottom CTA */}
       <ScrollReveal className="text-center mt-16 md:mt-20 px-6" delay={0.2}>
-        <p className="font-display text-lg md:text-xl uppercase tracking-wider font-light italic text-gray-300 mb-2 max-w-[800px] mx-auto leading-relaxed">
-          ALTA PERFORMANCE, DESIGN INOVADOR E DURABILIDADE
+        <p className="font-display text-lg md:text-xl uppercase tracking-wider font-light italic text-gray-300 mb-10 max-w-[800px] mx-auto leading-relaxed">
+          SE VOCÊ BUSCA UM PROJETO FUNCIONAL, DURÁVEL E DE ALTO PADRÃO,<br className="hidden md:block"/> VOCÊ ESTÁ NO LUGAR CERTO.
         </p>
-        <p className="font-display text-lg md:text-xl uppercase tracking-wider font-light italic text-gray-300 mb-10 max-w-[800px] mx-auto">
-          PARA O SEU TREINO.
-        </p>
-        <button className="btn-ghost mx-auto">
-          <span className="relative z-10">FALAR COM UM ESPECIALISTA</span>
+        <button className="btn-ghost mx-auto text-sm">
+          <span className="relative z-10">Falar com um especialista agora</span>
           <ArrowRight size={16} className="relative z-10" />
         </button>
       </ScrollReveal>

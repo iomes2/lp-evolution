@@ -77,8 +77,8 @@ const TrustLogos = () => {
       {/* Headline */}
       <ScrollReveal className="container-default text-center mb-16 md:mb-20">
         <h2 className="font-display text-xl md:text-2xl lg:text-3xl font-light italic tracking-[0.15em] uppercase text-gray-200">
-          Eles confiam na nossa{' '}
-          <span className="font-black not-italic text-white">qualidade e performance:</span>
+          EMPRESAS QUE CONFIAM NA{' '}
+          <span className="font-black not-italic text-white">EVOLUTION FITNESS</span>
         </h2>
       </ScrollReveal>
 

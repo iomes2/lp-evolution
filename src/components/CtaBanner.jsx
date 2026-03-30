@@ -20,58 +20,25 @@ const CtaBanner = () => {
         <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-10 lg:gap-16">
           {/* Left — Copy */}
           <div className="max-w-[600px]">
-            <ScrollReveal direction="left" duration={0.7}>
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-8 h-[2px] bg-primary" />
-                <span className="text-primary uppercase text-xs font-bold tracking-[0.3em] font-display">PRECISA DE AJUDA PARA ESCOLHER OS EQUIPAMENTOS IDEAIS?</span>
-              </div>
-            </ScrollReveal>
-
             <ScrollReveal delay={0.1} duration={0.7}>
-              <h2 className="font-display text-2xl md:text-3xl lg:text-4xl uppercase leading-[1.15] tracking-wide">
-                <span className="font-light text-gray-300">PRECISA DE AJUDA PARA ESCOLHER</span>
-                <br />
-                <span className="font-black text-white italic">OS EQUIPAMENTOS IDEAIS?</span>
+              <h2 className="font-display text-2xl md:text-3xl lg:text-4xl uppercase leading-[1.15] tracking-wide text-gray-300">
+                VAMOS CONVERSAR SOBRE <br />
+                <span className="font-black text-white italic">O SEU PROJETO?</span>
               </h2>
             </ScrollReveal>
 
             <ScrollReveal delay={0.2} duration={0.6}>
               <p className="mt-4 text-gray-400 font-sans text-sm md:text-base leading-relaxed max-w-[480px]">
-                Temos uma equipe pronta para tirar as suas dúvidas e ajudar no que for preciso.
+                Fale com um especialista da Evolution Fitness e receba uma orientação personalizada.
               </p>
-            </ScrollReveal>
-
-            {/* Trust reinforcers */}
-            <ScrollReveal delay={0.3} duration={0.5}>
-              <div className="flex flex-wrap items-center gap-6 mt-6 text-xs text-gray-500">
-                <div className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 rounded-full bg-primary/60" />
-                  <span>Fabricante direto — melhor custo</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 rounded-full bg-primary/60" />
-                  <span>Entrega garantida em todo o Brasil</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 rounded-full bg-primary/60" />
-                  <span>Suporte técnico pós-venda real</span>
-                </div>
-              </div>
             </ScrollReveal>
           </div>
 
           {/* Right — CTA Block */}
           <ScrollReveal direction="right" delay={0.2} duration={0.7}>
             <div className="flex flex-col items-start lg:items-center gap-5">
-              <button className="btn-primary">
-                <span className="relative z-10">FALAR COM UM ESPECIALISTA</span>
-                <ArrowRight size={18} className="relative z-10 transition-transform duration-300" />
-              </button>
-
-              {/* Alternative — WhatsApp */}
-              <button className="btn-ghost text-xs py-3 px-5">
-                <MessageCircle size={14} className="relative z-10" />
-                <span className="relative z-10">Ou chame pelo WhatsApp</span>
+              <button className="bg-white text-black font-display font-bold py-4 px-8 uppercase tracking-wider text-sm hover:bg-gray-200 transition-colors">
+                Falar com um especialista agora
               </button>
             </div>
           </ScrollReveal>

@@ -10,23 +10,23 @@ const ProcessSteps = () => {
   const steps = [
     {
       number: '1',
-      title: 'Biomecânica Avançada',
-      description: 'Movimentos precisos e seguros garantindo a melhor performance e proteção nas articulações.',
+      title: 'Entendemos seu projeto e objetivo',
+      description: '',
     },
     {
       number: '2',
-      title: 'Acabamento Premium',
-      description: 'Design moderno e materiais de altíssima qualidade que valorizam o seu espaço de treino.',
+      title: 'Avaliamos o espaço e o perfil de uso',
+      description: '',
     },
     {
       number: '3',
-      title: 'Durabilidade Extrema',
-      description: 'Equipamentos robustos desenvolvidos para suportar o uso intenso do dia a dia da academia.',
+      title: 'Desenvolvemos um projeto exclusivo',
+      description: '',
     },
     {
       number: '4',
-      title: 'Design Ergonômico',
-      description: 'Cada detalhe é pensado para oferecer adaptação perfeita e sofisticação.',
+      title: 'Entregamos e montamos com equipe especializada',
+      description: '',
     },
   ];
 
@@ -48,18 +48,9 @@ const ProcessSteps = () => {
 
       {/* Headline */}
       <ScrollReveal className="relative z-10 container-default text-center mb-6">
-        <div className="flex items-center justify-center gap-3 mb-6">
-          <div className="w-8 h-[2px] bg-primary" />
-          <span className="text-primary uppercase text-xs font-bold tracking-[0.3em] font-display">Como funciona</span>
-          <div className="w-8 h-[2px] bg-primary" />
-        </div>
         <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-light italic tracking-[0.12em] uppercase text-gray-300">
-          NOSSOS EQUIPAMENTOS SÃO PENSADOS{' '}
-          <span className="font-black not-italic text-white">NO SEU TREINO.</span>
+          NOSSO PROCESSO É <span className="font-black not-italic text-white">SIMPLES E EFICIENTE</span>
         </h2>
-        <p className="mt-4 text-gray-400 font-sans text-base md:text-lg max-w-[600px] mx-auto">
-          Cada detalhe foi desenvolvido para garantir alta performance, segurança e resultados excepcionais.
-        </p>
       </ScrollReveal>
 
       {/* Steps — Timeline Layout */}

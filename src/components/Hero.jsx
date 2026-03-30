@@ -43,57 +43,34 @@ const Hero = () => {
           
           {/* Tagline accent */}
           <ScrollReveal direction="left" delay={0.1} duration={0.7} once>
-            <div className="flex items-center gap-3 mb-6">
+             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-[2px] bg-primary"></div>
-              <span className="text-primary uppercase text-sm font-bold tracking-[0.25em] font-display">Evolution Fitness · Fabricante Oficial</span>
+              <span className="text-primary uppercase text-sm font-bold tracking-[0.25em] font-display">EVOLUTION FITNESS</span>
             </div>
           </ScrollReveal>
 
           {/* Headline */}
           <ScrollReveal delay={0.3} duration={0.8} once>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-6 uppercase text-white">
-              EQUIPAMENTOS DE <br/>
-              <span className="text-gray-400 font-light">ALTA PERFORMANCE,</span> <br className="hidden md:block"/>
-              DESENVOLVIDOS PARA <span className="text-primary">MAXIMIZAR SEUS TREINOS</span>
+              PROJETOS COMPLETOS DE ACADEMIAS, <br className="hidden md:block"/>
+              DO <span className="text-primary">PLANEJAMENTO</span> À <span className="text-primary">ENTREGA FINAL</span>
             </h1>
           </ScrollReveal>
 
           {/* Subheadline */}
           <ScrollReveal delay={0.5} duration={0.7} once>
-            <p className="text-lg md:text-xl leading-relaxed mb-8 text-gray-300 font-sans max-w-[560px]">
-              Nossos equipamentos oferecem durabilidade e conforto com biomecânica avançada.
+            <p className="text-lg md:text-xl leading-relaxed mb-10 text-gray-300 font-sans max-w-[560px]">
+              Planejamento técnico, equipamentos de alta performance e suporte especializado para sua necessidade.
             </p>
           </ScrollReveal>
 
-          {/* Social proof strip */}
-          <ScrollReveal delay={0.7} duration={0.6} once>
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 mb-10 text-sm text-gray-400">
-              <div className="flex items-center gap-2">
-                <CheckCircle2 size={16} className="text-primary" />
-                <span>+100.000 equipamentos vendidos</span>
-              </div>
-              {/* <div className="flex items-center gap-2">
-                <CheckCircle2 size={16} className="text-primary" />
-                <span>+300 pontos de venda no Brasil</span>
-              </div> */}
-              <div className="flex items-center gap-2">
-                <CheckCircle2 size={16} className="text-primary" />
-                <span>15 anos de mercado</span>
-              </div>
-            </div>
-          </ScrollReveal>
-
           {/* CTA */}
-          <ScrollReveal delay={0.9} duration={0.6} once>
+          <ScrollReveal delay={0.7} duration={0.6} once>
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
               <button className="btn-primary">
-                <span className="relative z-10">Falar com um especialista</span>
+                <span className="relative z-10">Falar com um especialista agora</span>
                 <ArrowRight size={18} className="relative z-10 transition-transform group-hover:translate-x-1" />
               </button>
-              {/* <button className="btn-ghost">
-                <span className="relative z-10">Falar com um especialista</span>
-                <ArrowRight size={16} className="relative z-10" />
-              </button> */}
             </div>
           </ScrollReveal>
         </div>
