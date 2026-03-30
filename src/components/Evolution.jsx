@@ -6,7 +6,7 @@ import video1 from '../assets/0_Woman_Treadmill_1920x1080.mp4';
 import video2 from '../assets/2_Gym_Fitness_1920x1080.mp4';
 import video3 from '../assets/0_Gym_Fitness_1920x1080.mp4';
 import video4 from '../assets/Fit-Curitiba-Itajai-1.mp4';
-import video5 from '../assets/ativagf.mp4';
+// import video5 from '../assets/ativagf.mp4';
 
 const Evolution = () => {
   const scrollRef = useRef(null);
@@ -17,7 +17,7 @@ const Evolution = () => {
     { id: 2, label: "MUSCULAÇÃO", video: video2 },
     { id: 3, label: "ACESSÓRIOS", video: video3 },
     { id: 4, label: "PESOS LIVRES", video: video4 },
-    { id: 5, label: "CROSSFIT", video: video5 },
+    // { id: 5, label: "CROSSFIT", video: video5 },
   ];
 
   // Triplicamos os items para criar o loop infinito

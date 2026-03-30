@@ -72,10 +72,10 @@ const Hero = () => {
                 <CheckCircle2 size={16} className="text-primary" />
                 <span>+100.000 equipamentos vendidos</span>
               </div>
-              <div className="flex items-center gap-2">
+              {/* <div className="flex items-center gap-2">
                 <CheckCircle2 size={16} className="text-primary" />
                 <span>+300 pontos de venda no Brasil</span>
-              </div>
+              </div> */}
               <div className="flex items-center gap-2">
                 <CheckCircle2 size={16} className="text-primary" />
                 <span>15 anos de mercado</span>
@@ -87,13 +87,13 @@ const Hero = () => {
           <ScrollReveal delay={0.9} duration={0.6} once>
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
               <button className="btn-primary">
-                <span className="relative z-10">CONHECER EQUIPAMENTOS</span>
+                <span className="relative z-10">Falar com um especialista</span>
                 <ArrowRight size={18} className="relative z-10 transition-transform group-hover:translate-x-1" />
               </button>
-              <button className="btn-ghost">
+              {/* <button className="btn-ghost">
                 <span className="relative z-10">Falar com um especialista</span>
                 <ArrowRight size={16} className="relative z-10" />
-              </button>
+              </button> */}
             </div>
           </ScrollReveal>
         </div>
