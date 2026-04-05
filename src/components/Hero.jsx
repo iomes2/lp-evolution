@@ -2,7 +2,8 @@ import React from 'react';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ScrollReveal } from './ScrollAnimations';
-import heroVideo from '../assets/2_Gym_Fitness_Center_1920x1080.webm';
+import heroVideo from '../assets/bg_site_institucional10_menor.mp4';
+import evolutionLogo from '../assets/evolution-logo.png';
 
 const Hero = () => {
   const { scrollY } = useScroll();
@@ -28,12 +29,27 @@ const Hero = () => {
           onLoadedData={(e) => { e.target.playbackRate = 0.5; }}
           className="absolute right-0 top-0 w-full h-[120%] object-cover grayscale opacity-60"
         >
-          <source src={heroVideo} type="video/webm" />
+          <source src={heroVideo} type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-transparent"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
       </motion.div>
-∆
+
+      {/* Logo centralizada no topo */}
+      <motion.div
+        className="relative z-10 flex justify-center pt-10 md:pt-16"
+        style={{ opacity: contentOpacity }}
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+      >
+        <img 
+          src={evolutionLogo} 
+          alt="Evolution Fitness" 
+          className="w-[140px] md:w-[170px] lg:w-[200px] h-auto drop-shadow-lg"
+        />
+      </motion.div>
+
       {/* Main Content Area — Fade out on scroll */}
       <motion.div
         className="relative z-10 container-default flex-1 flex items-center py-20"

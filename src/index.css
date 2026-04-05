@@ -1,4 +1,171 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:ital,wght@0,400..900;1,400..900&display=swap');
+/* ── Brand Fonts: Termina (Display), Kallisto (Body), Magistral (Accent) ── */
+
+/* Termina — Display / Headlines */
+@font-face {
+  font-family: 'Termina';
+  src: url('./assets/fonts/TerminaFamily/TerminaTest-Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Termina';
+  src: url('./assets/fonts/TerminaFamily/TerminaTest-ExtraLight.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Termina';
+  src: url('./assets/fonts/TerminaFamily/TerminaTest-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Termina';
+  src: url('./assets/fonts/TerminaFamily/TerminaTest-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Termina';
+  src: url('./assets/fonts/TerminaFamily/TerminaTest-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Termina';
+  src: url('./assets/fonts/TerminaFamily/TerminaTest-Demi.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Termina';
+  src: url('./assets/fonts/TerminaFamily/TerminaTest-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Termina';
+  src: url('./assets/fonts/TerminaFamily/TerminaTest-Heavy.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Termina';
+  src: url('./assets/fonts/TerminaFamily/TerminaTest-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Kallisto — Body / Paragraphs */
+@font-face {
+  font-family: 'Kallisto';
+  src: url('./assets/fonts/KallistoFamily/fonnts.com-Kallisto_Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Kallisto';
+  src: url('./assets/fonts/KallistoFamily/fonnts.com-Kallisto_Thin_Italic.otf') format('opentype');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Kallisto';
+  src: url('./assets/fonts/KallistoFamily/fonnts.com-Kallisto_Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Kallisto';
+  src: url('./assets/fonts/KallistoFamily/fonnts.com-Kallisto_Light_Italic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Kallisto';
+  src: url('./assets/fonts/KallistoFamily/fonnts.com-Kallisto_Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Kallisto';
+  src: url('./assets/fonts/KallistoFamily/fonnts.com-Kallisto_Medium_Italic.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Kallisto';
+  src: url('./assets/fonts/KallistoFamily/fonnts.com-Kallisto_Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Kallisto';
+  src: url('./assets/fonts/KallistoFamily/fonnts.com-Kallisto_Bold_Italic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Kallisto';
+  src: url('./assets/fonts/KallistoFamily/fonnts.com-Kallisto_Heavy.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Kallisto';
+  src: url('./assets/fonts/KallistoFamily/fonnts.com-Kallisto_Heavy_Italic.otf') format('opentype');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Magistral — Accent / Taglines */
+@font-face {
+  font-family: 'Magistral';
+  src: url('./assets/fonts/Magistral/magistral-light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Magistral';
+  src: url('./assets/fonts/Magistral/magistral-light-italic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Magistral';
+  src: url('./assets/fonts/Magistral/magistral-book.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Magistral';
+  src: url('./assets/fonts/Magistral/magistral-book-italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
 
 @tailwind base;
 @tailwind components;

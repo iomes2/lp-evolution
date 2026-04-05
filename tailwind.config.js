@@ -18,8 +18,9 @@ export default {
         },
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        display: ['Montserrat', 'sans-serif'],
+        sans: ['Kallisto', 'sans-serif'],
+        display: ['Termina', 'sans-serif'],
+        accent: ['Magistral', 'serif'],
       },
       boxShadow: {
         'primary-glow': '0 8px 24px rgba(255, 90, 0, 0.4)',

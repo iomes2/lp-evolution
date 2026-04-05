@@ -89,7 +89,7 @@ const Evolution = () => {
       {/* Title */}
       <ScrollReveal className="text-center mb-14">
         <h2 className="font-display text-3xl md:text-4xl font-light italic tracking-wider uppercase">
-          A <span className="font-black text-white not-italic">EVOLUÇÃO</span> QUE VOCÊ PRECISA
+          GALERIA DE IMAGENS DAS <span className="font-black text-white not-italic">OBRAS</span> QUE REALIZAMOS
         </h2>
       </ScrollReveal>
 
