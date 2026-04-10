@@ -18,8 +18,9 @@ export default {
         },
       },
       fontFamily: {
-        sans: ['Kallisto', 'sans-serif'],
-        display: ['Termina', 'sans-serif'],
+        sans: ['"Proxima Nova"', 'Montserrat', 'sans-serif'],
+        display: ['Magistral', 'sans-serif'],
+        subtitle: ['"Proxima Nova"', 'Montserrat', 'sans-serif'],
         accent: ['Magistral', 'serif'],
       },
       boxShadow: {

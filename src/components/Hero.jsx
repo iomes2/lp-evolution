@@ -2,7 +2,7 @@ import React from 'react';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ScrollReveal } from './ScrollAnimations';
-import heroVideo from '../assets/bg_site_institucional10_menor.mp4';
+import heroVideo from '../assets/video HERO LP.mp4';
 import evolutionLogo from '../assets/evolution-logo.png';
 
 const Hero = () => {
@@ -26,7 +26,6 @@ const Hero = () => {
           loop 
           muted 
           playsInline
-          onLoadedData={(e) => { e.target.playbackRate = 0.5; }}
           className="absolute right-0 top-0 w-full h-[120%] object-cover grayscale opacity-60"
         >
           <source src={heroVideo} type="video/mp4" />
@@ -59,15 +58,15 @@ const Hero = () => {
           
           {/* Tagline accent */}
           <ScrollReveal direction="left" delay={0.1} duration={0.7} once>
-             <div className="flex items-center gap-3 mb-6">
+             {/* <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-[2px] bg-primary"></div>
               <span className="text-primary uppercase text-sm font-bold tracking-[0.25em] font-display">EVOLUTION FITNESS</span>
-            </div>
+            </div> */}
           </ScrollReveal>
 
           {/* Headline */}
           <ScrollReveal delay={0.3} duration={0.8} once>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-6 uppercase text-white">
+            <h1 className="font-display text-4xl md:text-5xl lg:text-5xl font-bold leading-[1.1] mb-6 uppercase text-white">
               PROJETOS COMPLETOS DE ACADEMIAS, <br className="hidden md:block"/>
               DO <span className="text-primary">PLANEJAMENTO</span> À <span className="text-primary">ENTREGA FINAL</span>
             </h1>
@@ -75,8 +74,8 @@ const Hero = () => {
 
           {/* Subheadline */}
           <ScrollReveal delay={0.5} duration={0.7} once>
-            <p className="text-lg md:text-xl leading-relaxed mb-10 text-gray-300 font-sans max-w-[560px]">
-              Planejamento técnico, equipamentos de alta performance e suporte especializado para sua necessidade.
+            <p className="text-lg md:text-xl leading-relaxed mb-10 text-gray-300 font-subtitle max-w-[560px]">
+              Atuamos desde a concepção até a entrega e montagem final, atendendo academias, condomínios, construtoras, hotéis e empresas em todo o Brasil.
             </p>
           </ScrollReveal>
 

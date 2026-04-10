@@ -104,7 +104,7 @@ const About = () => {
           {/* 6 — CTA bottom | full width, row4 */}
           <StaggerItem className="col-span-2 md:col-span-4 md:row-start-4 bg-[#111111] border border-white/[0.06] p-7 rounded-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
             <p className="text-sm text-gray-400 leading-relaxed">
-              <span className="text-white font-semibold">+ 10 anos no mercado</span>{' '}
+              <span className="text-white font-semibold">+ 15 anos no mercado</span>{' '}
               — referência em equipamentos de fitness de alto nível, fabricação e vendas.
             </p>
             <button className="btn-ghost shrink-0 text-xs py-3 px-5">
