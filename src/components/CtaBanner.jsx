@@ -1,8 +1,14 @@
 import React from 'react';
-import { ArrowRight, MessageCircle } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { ScrollReveal } from './ScrollAnimations';
 
 const CtaBanner = () => {
+  const scrollToContact = () => {
+    const el = document.getElementById('contact');
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="relative bg-[#111111] text-white py-14 md:py-16 overflow-hidden">
       {/* Background decorative elements */}
@@ -37,9 +43,41 @@ const CtaBanner = () => {
           {/* Right — CTA Block */}
           <ScrollReveal direction="right" delay={0.2} duration={0.7}>
             <div className="flex flex-col items-start lg:items-center gap-5">
-              <button className="bg-white text-black font-display font-bold py-4 px-8 uppercase tracking-wider text-sm hover:bg-gray-200 transition-colors">
-                Falar com um especialista agora
-              </button>
+              {/* Pulsing ambient glow behind button */}
+              <div className="relative group">
+                <motion.div
+                  className="absolute -inset-3 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl pointer-events-none"
+                  style={{ background: 'radial-gradient(ellipse, rgba(255,90,0,0.35) 0%, transparent 70%)' }}
+                  animate={{
+                    scale: [1, 1.1, 1],
+                    opacity: [0.3, 0.5, 0.3],
+                  }}
+                  transition={{
+                    duration: 2.5,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                  }}
+                />
+
+                <motion.button
+                  onClick={scrollToContact}
+                  className="btn-primary group relative py-4 px-10 text-sm md:text-base"
+                  whileHover={{ scale: 1.03, y: -2 }}
+                  whileTap={{ scale: 0.97 }}
+                  transition={{ type: 'spring', stiffness: 400, damping: 20 }}
+                >
+                  <span className="relative z-10 flex items-center gap-3">
+                    Falar com um especialista
+                    <motion.span
+                      className="inline-block"
+                      animate={{ x: [0, 4, 0] }}
+                      transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+                    >
+                      <ArrowRight size={18} strokeWidth={2.5} />
+                    </motion.span>
+                  </span>
+                </motion.button>
+              </div>
             </div>
           </ScrollReveal>
         </div>

@@ -158,13 +158,13 @@ const ContactForm = () => {
                   </InputField>
 
                   {/* Empresa */}
-                  <InputField label="Assunto da Mensagem" required>
+                  <InputField label="Nome da Empresa" required>
                     <input
                       type="text"
                       name="company"
                       value={form.company}
                       onChange={handleChange}
-                      placeholder="Sobre o que quer falar?"
+                      placeholder="Qual o nome da sua empresa?"
                       className={inputClass}
                       required
                     />
