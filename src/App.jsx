@@ -14,7 +14,7 @@ import './index.css'
 
 function App() {
   return (
-    <div className="font-sans">
+    <div className="font-sans overflow-x-hidden">
       <ScrollIndicator />
 
       <div id="hero"><Hero /></div>

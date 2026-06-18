@@ -54,7 +54,7 @@ const Hero = () => {
         className="relative z-10 container-default flex-1 flex items-center py-20"
         style={{ opacity: contentOpacity, y: contentY }}
       >
-        <div className="max-w-[750px] text-left">
+        <div className="max-w-[750px] lg:max-w-[900px] text-left">
           
           {/* Tagline accent */}
           <ScrollReveal direction="left" delay={0.1} duration={0.7} once>
@@ -66,16 +66,28 @@ const Hero = () => {
 
           {/* Headline */}
           <ScrollReveal delay={0.3} duration={0.8} once>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-5xl font-bold leading-[1.1] mb-6 uppercase text-white">
-              PROJETOS COMPLETOS DE ACADEMIAS, <br className="hidden md:block"/>
-              DO <span className="text-primary">PLANEJAMENTO</span> À <span className="text-primary">ENTREGA FINAL</span>
+            <h1 className="font-display text-[26px] sm:text-3xl md:text-5xl lg:text-5xl font-bold leading-[1.2] md:leading-[1.1] mb-6 uppercase text-white">
+              {/* DESKTOP VERSION */}
+              <span className="hidden md:block">
+                <span className="text-primary">PROJETOS COMPLETOS</span> DE <br />
+                ACADEMIAS, DO PLANEJAMENTO <br />
+                À ENTREGA FINAL
+              </span>
+
+              {/* MOBILE VERSION */}
+              <span className="md:hidden block">
+                <span className="text-primary">PROJETOS COMPLETOS</span> <br />
+                DE ACADEMIAS, <br />
+                DO PLANEJAMENTO <br />
+                À ENTREGA FINAL
+              </span>
             </h1>
           </ScrollReveal>
 
           {/* Subheadline */}
           <ScrollReveal delay={0.5} duration={0.7} once>
-            <p className="text-lg md:text-xl leading-relaxed mb-10 text-gray-300 font-subtitle max-w-[560px]">
-              Atuamos desde a concepção até a entrega e montagem final, atendendo academias, condomínios, construtoras, hotéis e empresas em todo o Brasil.
+            <p className="text-sm md:text-base leading-relaxed mb-10 text-gray-400 font-subtitle max-w-[480px]">
+              Planejamento técnico, equipamentos de alta performance e suporte especializado para sua necessidade.
             </p>
           </ScrollReveal>
 
@@ -83,7 +95,7 @@ const Hero = () => {
           <ScrollReveal delay={0.7} duration={0.6} once>
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
               <button className="btn-primary">
-                <span className="relative z-10">Falar com um especialista agora</span>
+                <span className="relative z-10 uppercase">Falar com um especialista agora</span>
                 <ArrowRight size={18} className="relative z-10 transition-transform group-hover:translate-x-1" />
               </button>
             </div>
