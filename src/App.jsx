@@ -3,6 +3,7 @@ import Hero from './components/Hero'
 import About from './components/About'
 import Evolution from './components/Evolution'
 import TrustLogos from './components/TrustLogos'
+import RealProjects from './components/RealProjects'
 import ProcessSteps from './components/ProcessSteps'
 import Benefits from './components/Benefits'
 import CtaBanner from './components/CtaBanner'
@@ -26,8 +27,10 @@ function App() {
 
       <div id="evolution"><Evolution /></div>
 
-      {/* Evolution (black) → TrustLogos (black) — subtle tilt */}
+      {/* Evolution (black) → RealProjects (#0a0a0a) */}
       <SectionDivider type="tilt" from="#000000" to="#0a0a0a" />
+
+      <div id="real-projects"><RealProjects /></div>
 
       <div id="trust"><TrustLogos /></div>
 

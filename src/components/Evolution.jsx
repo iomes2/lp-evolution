@@ -2,10 +2,12 @@ import React, { useRef, useEffect, useCallback, useState } from 'react';
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import { ScrollReveal } from './ScrollAnimations';
 
-import video1 from '../assets/0_Woman_Treadmill_1920x1080.mp4';
-import video2 from '../assets/2_Gym_Fitness_1920x1080.mp4';
-import video3 from '../assets/0_Gym_Fitness_1920x1080.mp4';
-import video4 from '../assets/Fit-Curitiba-Itajai-1.mp4';
+// Static image imports
+import img1 from '../assets/CONDOMÍNIOS.png';
+import img2 from '../assets/CONSTRUTORAS E INCORPORADORAS.png';
+import img3 from '../assets/HOME GYS DE ALTO PADRÃO_.png';
+import img4 from '../assets/HOTÉIS E RISORTES.png';
+import img5 from '../assets/ACADEMIAS PROFISSIONAIS.png';
 
 const Evolution = () => {
   const scrollRef = useRef(null);
@@ -14,11 +16,11 @@ const Evolution = () => {
   const autoScrollRef = useRef(null);
 
   const categories = [
-    { id: 1, label: "CONDOMÍNIOS", video: video1 },
-    { id: 2, label: "CONSTRUTORAS E\nINCORPORADORAS", video: video2 },
-    { id: 3, label: "HOME GYMS DE\nALTO PADRÃO", video: video3 },
-    { id: 4, label: "HOTÉIS E RESORTS", video: video4 },
-    { id: 5, label: "ACADEMIAS\nPROFISSIONAIS", video: video1 },
+    { id: 1, label: "CONDOMÍNIOS", image: img1 },
+    { id: 2, label: "CONSTRUTORAS E\nINCORPORADORAS", image: img2 },
+    { id: 3, label: "HOME GYMS DE\nALTO PADRÃO", image: img3 },
+    { id: 4, label: "HOTÉIS E RESORTS", image: img4 },
+    { id: 5, label: "ACADEMIAS\nPROFISSIONAIS", image: img5 },
   ];
 
   // Triplicamos para criar o loop infinito
@@ -146,17 +148,13 @@ const Evolution = () => {
               data-card
               className="flex-shrink-0 w-[240px] md:w-[280px] h-[360px] md:h-[420px] bg-[#1A1A1A] rounded-2xl border border-white/[0.06] relative overflow-hidden cursor-pointer group hover:border-primary/40 transition-all duration-300"
             >
-              {/* Video Background */}
-              {cat.video && (
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
+              {/* Static Image Background */}
+              {cat.image && (
+                <img
+                  src={cat.image}
+                  alt={cat.label}
                   className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 group-hover:opacity-90 transition-all duration-700"
-                >
-                  <source src={cat.video} type="video/mp4" />
-                </video>
+                />
               )}
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent group-hover:via-black/10 transition-colors duration-500" />
 
