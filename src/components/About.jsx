@@ -95,7 +95,10 @@ const About = () => {
               <span className="text-white font-semibold">+ 15 anos no mercado</span>{' '}
               — referência em equipamentos de fitness de alto nível, fabricação e vendas.
             </p>
-            <button className="btn-ghost shrink-0 text-xs py-3 px-5">
+            <button 
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              className="btn-ghost shrink-0 text-xs py-3 px-5"
+            >
               <span className="relative z-10 uppercase">Falar com um especialista agora</span>
               <ArrowRight size={14} className="relative z-10" />
             </button>

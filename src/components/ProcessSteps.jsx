@@ -175,7 +175,10 @@ const ProcessSteps = () => {
 
       {/* CTA Block — Conversion push */}
       <ScrollReveal className="relative z-10 text-center mt-16 md:mt-24 px-6" delay={0.3}>
-        <button className="btn-primary mx-auto">
+        <button 
+          onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+          className="btn-primary mx-auto"
+        >
           <span className="relative z-10">FALAR COM UM ESPECIALISTA</span>
           <ArrowRight size={18} className="relative z-10 transition-transform duration-300 group-hover:translate-x-1" />
         </button>

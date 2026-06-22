@@ -174,7 +174,10 @@ const Evolution = () => {
         <p className="font-display text-lg md:text-xl uppercase tracking-wider font-light italic text-gray-300 mb-10 max-w-[800px] mx-auto leading-relaxed">
           SE VOCÊ BUSCA UM PROJETO FUNCIONAL, DURÁVEL E DE ALTO PADRÃO,<br className="hidden md:block"/> VOCÊ ESTÁ NO LUGAR CERTO.
         </p>
-        <button className="btn-ghost mx-auto text-sm">
+        <button 
+          onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+          className="btn-ghost mx-auto text-sm"
+        >
           <span className="relative z-10">Falar com um especialista agora</span>
           <ArrowRight size={16} className="relative z-10" />
         </button>

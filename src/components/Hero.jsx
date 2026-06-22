@@ -94,7 +94,10 @@ const Hero = () => {
           {/* CTA */}
           <ScrollReveal delay={0.7} duration={0.6} once>
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-              <button className="btn-primary">
+              <button 
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                className="btn-primary"
+              >
                 <span className="relative z-10 uppercase">Falar com um especialista agora</span>
                 <ArrowRight size={18} className="relative z-10 transition-transform group-hover:translate-x-1" />
               </button>

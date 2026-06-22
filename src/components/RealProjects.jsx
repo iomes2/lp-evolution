@@ -116,7 +116,10 @@ const RealProjects = () => {
 
         {/* CTA Button */}
         <ScrollReveal className="text-center" delay={0.2}>
-          <button className="bg-white/5 hover:bg-white/10 text-white border border-white/10 hover:border-white/20 transition-all duration-300 py-3 px-8 rounded-full font-display text-sm uppercase tracking-widest inline-flex items-center gap-2 group">
+          <button 
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            className="bg-white/5 hover:bg-white/10 text-white border border-white/10 hover:border-white/20 transition-all duration-300 py-3 px-8 rounded-full font-display text-sm uppercase tracking-widest inline-flex items-center gap-2 group"
+          >
             Quero um projeto como esse
             <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
           </button>

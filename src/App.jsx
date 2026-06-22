@@ -1,6 +1,7 @@
 import React from 'react'
 import Hero from './components/Hero'
 import About from './components/About'
+import ObjectionPoints from './components/ObjectionPoints'
 import Evolution from './components/Evolution'
 import TrustLogos from './components/TrustLogos'
 import RealProjects from './components/RealProjects'
@@ -21,8 +22,9 @@ function App() {
       <div id="hero"><Hero /></div>
 
       <div id="about"><About /></div>
+      <ObjectionPoints />
 
-      {/* About (#1C1C1C) → Evolution (black) */}
+      {/* About/ObjectionPoints (#1C1C1C) → Evolution (black) */}
       <SectionDivider type="curve" from="#1C1C1C" to="#000000" />
 
       <div id="evolution"><Evolution /></div>
