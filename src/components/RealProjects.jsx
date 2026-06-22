@@ -3,37 +3,38 @@ import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { ScrollReveal } from './ScrollAnimations';
 import { motion } from 'framer-motion';
 
-// Use the 4 videos saved previously
-import video1 from '../assets/0_Woman_Treadmill_1920x1080.mp4';
-import video2 from '../assets/2_Gym_Fitness_1920x1080.mp4';
-import video3 from '../assets/0_Gym_Fitness_1920x1080.mp4';
-import video4 from '../assets/Fit-Curitiba-Itajai-1.mp4';
+// Use the 5 gifs requested
+import gif1 from '../assets/GIF BRAVA ICON.gif';
+import gif2 from '../assets/krcom.gif';
+import gif3 from '../assets/Maison la fayetle.gif';
+import gif4 from '../assets/Restretto.gif';
+import gif5 from '../assets/STV NAUTIC.gif';
 
 const RealProjects = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
 
   const projects = [
-    { id: 1, video: video1 },
-    { id: 2, video: video2 },
-    { id: 3, video: video3 },
-    { id: 4, video: video4 },
+    { id: 1, media: gif1 },
+    { id: 2, media: gif2 },
+    { id: 3, media: gif3 },
+    { id: 4, media: gif4 },
+    { id: 5, media: gif5 },
   ];
 
-  // Auto-loop effect every 4 seconds
+  // Auto-loop effect every 5.5 seconds (slower)
   useEffect(() => {
-    if (isHovered) return;
     const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % 4);
-    }, 4000);
+      setActiveIndex((prev) => (prev + 1) % 5);
+    }, 5500);
     return () => clearInterval(interval);
-  }, [isHovered]);
+  }, []);
 
   const positions = {
-    0: { x: "-165%", scale: 0.8, opacity: 0.4, zIndex: 10 },
-    1: { x: "-55%", scale: 1, opacity: 1, zIndex: 20 },
-    2: { x: "55%", scale: 1, opacity: 1, zIndex: 20 },
-    3: { x: "165%", scale: 0.8, opacity: 0.4, zIndex: 10 },
+    0: { x: "-275%", scale: 0.8, opacity: 0, zIndex: 5 },
+    1: { x: "-165%", scale: 0.8, opacity: 0.4, zIndex: 10 },
+    2: { x: "-55%", scale: 1, opacity: 1, zIndex: 20 },
+    3: { x: "55%", scale: 1, opacity: 1, zIndex: 20 },
+    4: { x: "165%", scale: 0.8, opacity: 0.4, zIndex: 10 },
   };
 
   return (
@@ -55,38 +56,32 @@ const RealProjects = () => {
           {/* Desktop Layout (Absolute Positioning for smooth glide) */}
           <div 
              className="hidden md:flex relative justify-center items-center w-full h-[450px] max-w-[1000px] mx-auto"
-             onMouseEnter={() => setIsHovered(true)}
-             onMouseLeave={() => setIsHovered(false)}
           >
             {projects.map((project, i) => {
                // Calculate relative position based on activeIndex
-               const p = (i - activeIndex + 4) % 4;
-               const isSide = p === 0 || p === 3;
+               const p = (i - activeIndex + 5) % 5;
+               const isSide = p === 1 || p === 4;
                
                return (
                  <motion.div
                    key={project.id}
                    initial={false}
                    animate={positions[p]}
-                   transition={{ duration: 0.9, ease: [0.25, 1, 0.35, 1] }}
+                   transition={{ duration: 1.2, ease: [0.25, 1, 0.35, 1] }}
                    className="absolute w-[280px] h-[400px] rounded-2xl overflow-hidden shadow-2xl shadow-black/80"
                  >
-                   <video
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
+                   <img
+                      src={project.media}
+                      alt={`Project ${project.id}`}
                       className="absolute inset-0 w-full h-full object-cover"
-                    >
-                      <source src={project.video} type="video/mp4" />
-                    </video>
+                    />
 
                     {/* Dark overlay for side items to make them blend in beautifully */}
                     <motion.div 
                       className="absolute inset-0 bg-black"
                       initial={false}
                       animate={{ opacity: isSide ? 0.6 : 0 }}
-                      transition={{ duration: 0.9 }}
+                      transition={{ duration: 1.2 }}
                     />
                     
                     {/* Bottom gradient for text readability (if you add text later) */}
@@ -100,15 +95,11 @@ const RealProjects = () => {
           <div className="md:hidden flex gap-4 overflow-x-auto pb-6 snap-x snap-mandatory" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
             {projects.map((project, idx) => (
               <div key={project.id} className="flex-shrink-0 w-[80vw] h-[400px] rounded-2xl overflow-hidden relative snap-center">
-                 <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
+                 <img
+                    src={project.media}
+                    alt={`Project ${project.id}`}
                     className="absolute inset-0 w-full h-full object-cover"
-                  >
-                    <source src={project.video} type="video/mp4" />
-                  </video>
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
               </div>
             ))}
