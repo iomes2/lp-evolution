@@ -3,22 +3,22 @@ import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { ScrollReveal } from './ScrollAnimations';
 import { motion } from 'framer-motion';
 
-// Use the 5 gifs requested
-import gif1 from '../assets/GIF BRAVA ICON.gif';
-import gif2 from '../assets/krcom.gif';
-import gif3 from '../assets/Maison la fayetle.gif';
-import gif4 from '../assets/Restretto.gif';
-import gif5 from '../assets/STV NAUTIC.gif';
+// Use the 5 mp4s requested
+import video1 from '../assets/GIF BRAVA ICON_.mp4';
+import video2 from '../assets/krcom_.mp4';
+import video3 from '../assets/Maison la fayetle.mp4';
+import video4 from '../assets/Restretto_.mp4';
+import video5 from '../assets/STV NAUTIC_.mp4';
 
 const RealProjects = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const projects = [
-    { id: 1, media: gif1 },
-    { id: 2, media: gif2 },
-    { id: 3, media: gif3 },
-    { id: 4, media: gif4 },
-    { id: 5, media: gif5 },
+    { id: 1, media: video1 },
+    { id: 2, media: video2 },
+    { id: 3, media: video3 },
+    { id: 4, media: video4 },
+    { id: 5, media: video5 },
   ];
 
   // Auto-loop effect every 5.5 seconds (slower)
@@ -70,11 +70,15 @@ const RealProjects = () => {
                    transition={{ duration: 1.2, ease: [0.25, 1, 0.35, 1] }}
                    className="absolute w-[280px] h-[400px] rounded-2xl overflow-hidden shadow-2xl shadow-black/80"
                  >
-                   <img
-                      src={project.media}
-                      alt={`Project ${project.id}`}
+                   <video
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
                       className="absolute inset-0 w-full h-full object-cover"
-                    />
+                    >
+                      <source src={project.media} type="video/mp4" />
+                    </video>
 
                     {/* Dark overlay for side items to make them blend in beautifully */}
                     <motion.div 
@@ -95,11 +99,15 @@ const RealProjects = () => {
           <div className="md:hidden flex gap-4 overflow-x-auto pb-6 snap-x snap-mandatory" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
             {projects.map((project, idx) => (
               <div key={project.id} className="flex-shrink-0 w-[80vw] h-[400px] rounded-2xl overflow-hidden relative snap-center">
-                 <img
-                    src={project.media}
-                    alt={`Project ${project.id}`}
+                 <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
                     className="absolute inset-0 w-full h-full object-cover"
-                  />
+                  >
+                    <source src={project.media} type="video/mp4" />
+                  </video>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
               </div>
             ))}
