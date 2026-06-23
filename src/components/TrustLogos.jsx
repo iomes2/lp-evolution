@@ -7,6 +7,13 @@ import DalloLogo from '../assets/_DALLO.png';
 import KrconLogo from '../assets/_KRCON.png';
 import StvLogo from '../assets/_STV_.png';
 
+// Import new logos
+import AikonLogo from '../assets/LOGO AIKON.png';
+import GrupoN1Logo from '../assets/LOGO GRUPO N1.png';
+import HalstenLogo from '../assets/Logo halsten.png';
+import HSantosLogo from '../assets/LOGO HSANTOS.png';
+import SelentGVLogo from '../assets/LOGO SELENT GV.png';
+
 const TrustLogos = () => {
   const logos = [
     {
@@ -28,6 +35,31 @@ const TrustLogos = () => {
       id: 4,
       name: 'Branco',
       src: BrancoLogo,
+    },
+    {
+      id: 5,
+      name: 'Aikon',
+      src: AikonLogo,
+    },
+    {
+      id: 6,
+      name: 'Grupo N1',
+      src: GrupoN1Logo,
+    },
+    {
+      id: 7,
+      name: 'Halsten',
+      src: HalstenLogo,
+    },
+    {
+      id: 8,
+      name: 'HSantos',
+      src: HSantosLogo,
+    },
+    {
+      id: 9,
+      name: 'Selent GV',
+      src: SelentGVLogo,
     },
   ];
 
