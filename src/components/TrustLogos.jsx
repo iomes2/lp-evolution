@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollReveal, StaggerContainer, StaggerItem } from './ScrollAnimations';
+import { ScrollReveal } from './ScrollAnimations';
 
 // Import original logos
 import BrancoLogo from '../assets/_BRANCO.png';
@@ -16,51 +16,15 @@ import SelentGVLogo from '../assets/LOGO SELENT GV.png';
 
 const TrustLogos = () => {
   const logos = [
-    {
-      id: 1,
-      name: 'Dallo',
-      src: DalloLogo,
-    },
-    {
-      id: 2,
-      name: 'KRCON',
-      src: KrconLogo,
-    },
-    {
-      id: 3,
-      name: 'STV',
-      src: StvLogo,
-    },
-    {
-      id: 4,
-      name: 'Branco',
-      src: BrancoLogo,
-    },
-    {
-      id: 5,
-      name: 'Aikon',
-      src: AikonLogo,
-    },
-    {
-      id: 6,
-      name: 'Grupo N1',
-      src: GrupoN1Logo,
-    },
-    {
-      id: 7,
-      name: 'Halsten',
-      src: HalstenLogo,
-    },
-    {
-      id: 8,
-      name: 'HSantos',
-      src: HSantosLogo,
-    },
-    {
-      id: 9,
-      name: 'Selent GV',
-      src: SelentGVLogo,
-    },
+    { id: 1, name: 'Dallo', src: DalloLogo },
+    { id: 2, name: 'KRCON', src: KrconLogo },
+    { id: 3, name: 'STV', src: StvLogo },
+    { id: 4, name: 'Branco', src: BrancoLogo },
+    { id: 5, name: 'Aikon', src: AikonLogo },
+    { id: 6, name: 'Grupo N1', src: GrupoN1Logo },
+    { id: 7, name: 'Halsten', src: HalstenLogo },
+    { id: 8, name: 'HSantos', src: HSantosLogo },
+    { id: 9, name: 'Selent GV', src: SelentGVLogo },
   ];
 
   return (
@@ -73,22 +37,32 @@ const TrustLogos = () => {
         </h2>
       </ScrollReveal>
 
-      {/* Logos Strip */}
-      <div className="container-default">
-        <StaggerContainer className="flex flex-wrap items-center justify-center gap-12 md:gap-16 lg:gap-20 xl:gap-24" staggerDelay={0.15}>
+      {/* Infinite Carousel */}
+      <div className="logos-carousel-wrapper">
+        <div className="logos-carousel-track">
+          {/* First set */}
           {logos.map((logo) => (
-            <StaggerItem
-              key={logo.id}
-              className="transition-all duration-500 cursor-default select-none opacity-50 hover:opacity-100 transform hover:scale-105"
-            >
-              <img 
-                src={logo.src} 
-                alt={logo.name} 
-                className="h-10 md:h-12 w-auto object-contain max-w-[150px] filter brightness-0 invert" 
+            <div key={`a-${logo.id}`} className="logos-carousel-item">
+              <img
+                src={logo.src}
+                alt={logo.name}
+                className="h-10 md:h-12 w-auto object-contain max-w-[150px] filter brightness-0 invert"
+                loading="lazy"
               />
-            </StaggerItem>
+            </div>
           ))}
-        </StaggerContainer>
+          {/* Duplicate set for seamless loop */}
+          {logos.map((logo) => (
+            <div key={`b-${logo.id}`} className="logos-carousel-item">
+              <img
+                src={logo.src}
+                alt={logo.name}
+                className="h-10 md:h-12 w-auto object-contain max-w-[150px] filter brightness-0 invert"
+                loading="lazy"
+              />
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* Subtle bottom divider */}

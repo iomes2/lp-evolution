@@ -255,3 +255,71 @@
     @apply w-full max-w-[1200px] mx-auto px-6;
   }
 }
+
+/* ── Infinite Logo Carousel ─────────────────────── */
+
+@keyframes carousel-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.logos-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}
+
+.logos-carousel-track {
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+  width: max-content;
+  animation: carousel-scroll 30s linear infinite;
+}
+
+.logos-carousel-wrapper:hover .logos-carousel-track {
+  animation-play-state: paused;
+}
+
+.logos-carousel-item {
+  flex-shrink: 0;
+  opacity: 0.45;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  cursor: default;
+  user-select: none;
+}
+
+.logos-carousel-item:hover {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+@media (min-width: 768px) {
+  .logos-carousel-track {
+    gap: 5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .logos-carousel-track {
+    gap: 6rem;
+  }
+}
