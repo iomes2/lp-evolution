@@ -54,10 +54,30 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    // Simulate async submission
-    await new Promise((res) => setTimeout(res, 1500));
-    setLoading(false);
-    setSubmitted(true);
+
+    try {
+      const payload = {
+        token_rdstation: '1347fb07b0b32c2d1f9d508abf1d95e2',
+        identificador: 'lp-evolution-contato',
+        nome: form.name,
+        email: form.email,
+        telefone: form.phone,
+        empresa: form.company,
+        cf_setor_de_origem: form.clientType,
+        cf_mensagem: form.message,
+      };
+
+      await fetch('https://app.rdstation.com.br/api/1.3/conversions', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+    } catch (err) {
+      console.error('[RD Station] Erro ao enviar conversão:', err);
+    } finally {
+      setLoading(false);
+      setSubmitted(true);
+    }
   };
 
   return (
