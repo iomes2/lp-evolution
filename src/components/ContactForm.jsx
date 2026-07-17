@@ -27,25 +27,25 @@ const inputClass =
 
 const ContactForm = () => {
   const [form, setForm] = useState({
-    name: '',
-    phone: '',
+    nome: '',
+    telefone: '',
     email: '',
-    company: '',
-    clientType: '',
-    message: '',
+    empresa: '',
+    cf_cf_setor_de_origem: '',
+    cf_cf_mensagem: '',
   });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    if (name === 'phone') {
+    if (name === 'telefone') {
       // Phone mask: (XX) XXXXX-XXXX
       const digits = value.replace(/\D/g, '').slice(0, 11);
       let masked = digits;
       if (digits.length > 2) masked = `(${digits.slice(0, 2)}) ${digits.slice(2)}`;
       if (digits.length > 7) masked = `(${digits.slice(0, 2)}) ${digits.slice(2, 7)}-${digits.slice(7)}`;
-      setForm((prev) => ({ ...prev, phone: masked }));
+      setForm((prev) => ({ ...prev, telefone: masked }));
     } else {
       setForm((prev) => ({ ...prev, [name]: value }));
     }
@@ -59,12 +59,12 @@ const ContactForm = () => {
       const payload = {
         token_rdstation: '1347fb07b0b32c2d1f9d508abf1d95e2',
         identificador: 'lp-evolution-contato',
-        nome: form.name,
+        nome: form.nome,
         email: form.email,
-        telefone: form.phone,
-        empresa: form.company,
-        cf_cf_setor_de_origem: form.clientType,
-        cf_cf_mensagem: form.message,
+        telefone: form.telefone,
+        empresa: form.empresa,
+        cf_cf_setor_de_origem: form.cf_cf_setor_de_origem,
+        cf_cf_mensagem: form.cf_cf_mensagem,
       };
 
       await fetch('https://app.rdstation.com.br/api/1.3/conversions', {
@@ -124,7 +124,7 @@ const ContactForm = () => {
                     Obrigado pelo contato! Nossa equipe responderá em breve — fique de olho no seu e-mail.
                   </p>
                   <button
-                    onClick={() => { setSubmitted(false); setForm({ name: '', phone: '', email: '', company: '', clientType: '', message: '' }); }}
+                    onClick={() => { setSubmitted(false); setForm({ nome: '', telefone: '', email: '', empresa: '', cf_cf_setor_de_origem: '', cf_cf_mensagem: '' }); }}
                     className="mt-2 text-primary text-sm underline underline-offset-4"
                   >
                     Enviar outra mensagem
@@ -138,13 +138,15 @@ const ContactForm = () => {
                   exit={{ opacity: 0, scale: 0.95 }}
                   className="flex flex-col gap-5"
                 >
+                  <input type="hidden" name="identificador" value="lp-evolution-contato" />
+                  
                   {/* Row 1: Nome + Telefone */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <InputField label="Nome Completo" required>
                       <input
                         type="text"
-                        name="name"
-                        value={form.name}
+                        name="nome"
+                        value={form.nome}
                         onChange={handleChange}
                         placeholder="Seu nome completo"
                         className={inputClass}
@@ -154,8 +156,8 @@ const ContactForm = () => {
                     <InputField label="Telefone" required>
                       <input
                         type="tel"
-                        name="phone"
-                        value={form.phone}
+                        name="telefone"
+                        value={form.telefone}
                         onChange={handleChange}
                         placeholder="(00) 00000-0000"
                         className={inputClass}
@@ -181,8 +183,8 @@ const ContactForm = () => {
                   <InputField label="Nome da Empresa" required>
                     <input
                       type="text"
-                      name="company"
-                      value={form.company}
+                      name="empresa"
+                      value={form.empresa}
                       onChange={handleChange}
                       placeholder="Qual o nome da sua empresa?"
                       className={inputClass}
@@ -193,8 +195,8 @@ const ContactForm = () => {
                   {/* Tipo de Cliente */}
                   <InputField label="Setor de origem" required>
                     <select
-                      name="clientType"
-                      value={form.clientType}
+                      name="cf_cf_setor_de_origem"
+                      value={form.cf_cf_setor_de_origem}
                       onChange={handleChange}
                       className={`${inputClass} cursor-pointer`}
                     >
@@ -210,8 +212,8 @@ const ContactForm = () => {
                   {/* Mensagem */}
                   <InputField label="Mensagem">
                     <textarea
-                      name="message"
-                      value={form.message}
+                      name="cf_cf_mensagem"
+                      value={form.cf_cf_mensagem}
                       onChange={handleChange}
                       rows={4}
                       placeholder="Conte-nos mais sobre o que precisa..."
