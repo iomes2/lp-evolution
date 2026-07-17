@@ -55,29 +55,12 @@ const ContactForm = () => {
     e.preventDefault();
     setLoading(true);
 
-    try {
-      const payload = {
-        token_rdstation: '1347fb07b0b32c2d1f9d508abf1d95e2',
-        identificador: 'lp-evolution-contato',
-        nome: form.nome,
-        email: form.email,
-        telefone: form.telefone,
-        empresa: form.empresa,
-        cf_cf_setor_de_origem: form.cf_cf_setor_de_origem,
-        cf_cf_mensagem: form.cf_cf_mensagem,
-      };
-
-      await fetch('https://app.rdstation.com.br/api/1.3/conversions', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      });
-    } catch (err) {
-      console.error('[RD Station] Erro ao enviar conversão:', err);
-    } finally {
+    // Simulamos um pequeno delay de rede para a interface,
+    // enquanto o script automático do RD Station (loader.js) captura e envia os dados por trás dos panos.
+    setTimeout(() => {
       setLoading(false);
       setSubmitted(true);
-    }
+    }, 1500);
   };
 
   return (
